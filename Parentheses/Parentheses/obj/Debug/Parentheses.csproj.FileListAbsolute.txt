@@ -1,0 +1,7 @@
+C:\Users\danya\source\repos\Parentheses\Parentheses\bin\Debug\Parentheses.exe.config
+C:\Users\danya\source\repos\Parentheses\Parentheses\bin\Debug\Parentheses.exe
+C:\Users\danya\source\repos\Parentheses\Parentheses\bin\Debug\Parentheses.pdb
+C:\Users\danya\source\repos\Parentheses\Parentheses\obj\Debug\Parentheses.csproj.AssemblyReference.cache
+C:\Users\danya\source\repos\Parentheses\Parentheses\obj\Debug\Parentheses.csproj.CoreCompileInputs.cache
+C:\Users\danya\source\repos\Parentheses\Parentheses\obj\Debug\Parentheses.exe
+C:\Users\danya\source\repos\Parentheses\Parentheses\obj\Debug\Parentheses.pdb
