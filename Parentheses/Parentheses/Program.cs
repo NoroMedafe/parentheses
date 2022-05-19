@@ -11,12 +11,8 @@ namespace Parentheses
         static void Main(string[] args)
         {
             string workingLine;
-            int numberOfLeftBrackets=0;
-            int numberOfRightBrackets=0;
-            int currentNestingDepthOfLeftParenthesis = 0;
-            int maxNestingDepthOfLeftParenthesis = 0;
-            int currentNestingDepthOfRightParenthesis = 0;
-            int maxNestingDepthOfRightParenthesis = 0;
+            int maxNestingDepthParenthesis = 0;
+            int depthParentgesis = 0;
 
             workingLine = Console.ReadLine();
 
@@ -28,34 +24,26 @@ namespace Parentheses
 
                     if (workingLine[i] == '(')
                     {
-                        numberOfLeftBrackets++;
-                        currentNestingDepthOfLeftParenthesis++;
+                        depthParentgesis++;
 
-                        if (currentNestingDepthOfRightParenthesis > maxNestingDepthOfRightParenthesis)
-                            maxNestingDepthOfRightParenthesis = currentNestingDepthOfRightParenthesis;
+                        if (maxNestingDepthParenthesis<depthParentgesis)
+                            maxNestingDepthParenthesis = depthParentgesis;
 
-                        currentNestingDepthOfRightParenthesis = 0;
                     }
                     else
                     {
+                        depthParentgesis--; 
 
-                        if (currentNestingDepthOfLeftParenthesis > maxNestingDepthOfLeftParenthesis)
-                            maxNestingDepthOfLeftParenthesis = currentNestingDepthOfLeftParenthesis;
-
-                        currentNestingDepthOfLeftParenthesis = 0;
-                        numberOfRightBrackets++;
-                        currentNestingDepthOfLeftParenthesis++;
+                        if (depthParentgesis<0)
+                        {
+                            Console.WriteLine("Строка некоректна");
+                            Console.ReadKey();
+                            return;
+                        }
                     }
-
                 }
 
-                if (numberOfLeftBrackets == numberOfRightBrackets)
-
-                    if (maxNestingDepthOfRightParenthesis> maxNestingDepthOfLeftParenthesis)
-                        Console.WriteLine("Строка корректная и максимальная глубина:" + maxNestingDepthOfRightParenthesis);
-                    else
-                        Console.WriteLine("Строка корректная и максимальная глубина:" + maxNestingDepthOfLeftParenthesis);
-
+                Console.WriteLine("Максимальаня глубина:" + maxNestingDepthParenthesis);
             }
             else
             {
